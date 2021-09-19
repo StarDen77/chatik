@@ -3,6 +3,8 @@ package info.neop.chatik.repos;
 import info.neop.chatik.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepo  extends JpaRepository<User, Long> {
+public interface UserRepo extends JpaRepository<User, Long> {
     User findByUsername(String username);
+
+    User findByActivationCode(String code);
 }
